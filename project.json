@@ -6,7 +6,8 @@
     "UiPath.Excel.Activities": "2.9.5",
     "UiPath.Mail.Activities": "1.9.5",
     "UiPath.System.Activities": "20.10.3",
-    "UiPath.UIAutomation.Activities": "20.10.8"
+    "UiPath.UIAutomation.Activities": "20.10.8",
+    "UipathTeam.String.Activities": "1.0.0"
   },
   "webServices": [],
   "entitiesStores": [],
