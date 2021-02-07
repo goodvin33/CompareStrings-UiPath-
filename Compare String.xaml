@@ -1,16 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.pathToDictionaryException="C:\Users\RPA-Dev\Documents\UiPath\TrashFolder\testDictionary.txt" this:Main.stringOne="Договор о бракосочетании Данилов" this:Main.stringTwo="даниловы паспорт" this:Main.persentException="50" this:Main.persentComparsion="80" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UipathTeam.String.Activities;assembly=LevenshteinAlgorithm" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.pathToDictionaryException="C:\Users\RPA-Dev\Documents\UiPath\TrashFolder\testDictionary.txt" this:Main.stringOne="Договор о бракосочетании Данилов" this:Main.stringTwo="даниловы паспорт" this:Main.perсentException="50" this:Main.perсentComparsion="80" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UipathTeam.String.Activities;assembly=LevenshteinAlgorithm" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="pathToDictionaryException" Type="InArgument(x:String)" />
     <x:Property Name="stringOne" Type="InArgument(x:String)" />
     <x:Property Name="stringTwo" Type="InArgument(x:String)" />
-    <x:Property Name="persentException" Type="InArgument(x:Int32)" />
     <x:Property Name="resultCompare" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="persentComparsion" Type="InArgument(x:Int32)" />
+    <x:Property Name="perсentException" Type="InArgument(x:Int32)" />
+    <x:Property Name="perсentComparsion" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,2792</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,2832</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -90,7 +90,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Создаем таблицу для записи экземпляров + результатов их сравнения" DataTable="[dt_resultCompare]" DisplayName="Build Data Table result compare" sap:VirtualizedContainerService.HintSize="569,108" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Item1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Item2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Result&quot; msdata:Caption=&quot;&quot; type=&quot;xs:float&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Создаем таблицу для записи экземпляров + результатов их сравнения" DataTable="[dt_resultCompare]" DisplayName="Build Data Table result compare" sap:VirtualizedContainerService.HintSize="569,108" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Item1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Item2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Result&quot; msdata:Caption=&quot;&quot; type=&quot;xs:float&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -177,7 +177,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Берем отдельно слово, которое имеет наибольший процент совпадения.&#xD;&#xA;Отправляем слово на проверку в словаре исключений.&#xD;&#xA;Если слово является исключением, обнуляем его показатели и смотрим следующую пару из таблицы, которая имеет наибольший процент совпадения.&#xD;&#xA;И так проверяем до тех пор, пока Наибольший процент совпадения в парах не будет меньше порога, заданного пользователем либо пока пара с наибольшим значением не будет содержаться в словаре исключений" DisplayName="Get target result" sap:VirtualizedContainerService.HintSize="569,1026" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Берем отдельно слово, которое имеет наибольший процент совпадения.&#xA;Отправляем слово на проверку в словаре исключений.&#xA;Если слово является исключением, обнуляем его показатели и смотрим следующую пару из таблицы, которая имеет наибольший процент совпадения.&#xA;И так проверяем до тех пор, пока Наибольший процент совпадения в парах не будет меньше порога, заданного пользователем либо пока пара с наибольшим значением не будет содержаться в словаре исключений" DisplayName="Get target result" sap:VirtualizedContainerService.HintSize="569,1026" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Get max percent comparsion" sap:VirtualizedContainerService.HintSize="376,699" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
@@ -200,18 +200,10 @@
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Значение на вход: &quot;+string_targetValue]" />
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Функция, проверяющая пару на совпадение в словаре исключений" DisplayName="Invoke Processing dictionary workflow" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Processing dictionary.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_thersholdPercentFind">
-                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="persentException" />
-              </InArgument>
-              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_resultFound">
-                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="boolean_resultIsException" />
-              </OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_pathToDictionary">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pathToDictionaryException" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_words">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="string_targetValue.ToLower" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_thersholdPercentFind">[perсentException]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_resultFound">[boolean_resultIsException]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_pathToDictionary">[pathToDictionaryException]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_words">[string_targetValue.ToLower]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -277,7 +269,7 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
       <ui:InterruptibleDoWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolean_resultIsException = True and Convert.ToSingle(dt_resultCompare.AsEnumerable.Max(function(x) x.Item(&quot;Result&quot;)))&gt;Convert.ToSingle(persentComparsion)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolean_resultIsException = True and Convert.ToSingle(dt_resultCompare.AsEnumerable.Max(function(x) x.Item(&quot;Result&quot;)))&gt;Convert.ToSingle(perсentComparsion)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
       </ui:InterruptibleDoWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -287,7 +279,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleDoWhile>
-    <If sap2010:Annotation.AnnotationText="Сравниваем результат с пороговым значением" Condition="[single_targetResult &gt;= Convert.ToSingle(persentComparsion)]" DisplayName="Compare target value and threshold percent" sap:VirtualizedContainerService.HintSize="569,239" sap2010:WorkflowViewState.IdRef="If_2">
+    <If sap2010:Annotation.AnnotationText="Сравниваем результат с пороговым значением" Condition="[single_targetResult &gt;= Convert.ToSingle(perсentComparsion)]" DisplayName="Compare target value and threshold percent" sap:VirtualizedContainerService.HintSize="569,239" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
